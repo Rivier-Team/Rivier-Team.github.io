@@ -1,0 +1,185 @@
+article #form 
+{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  top: 20px;
+}
+article #form .wrapper .input-data{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  width: 100%;
+}
+article #form .wrapper .input-data input{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  top: -32px;
+  border: none;
+  font-size: 17px;
+  text-align: center;
+  border-bottom: 2px solid silver;
+  color: #619bff;
+  font-weight: 600;
+  padding-left: 12px;
+}
+article #form .wrapper .input-data label{
+  position: absolute;
+  bottom: 10px;
+  text-align: center;
+  color: #333;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+article #form-comment
+{
+  width: 100%;
+}
+
+article #form-comment textarea
+{
+  position: relative;
+  padding: .3rem;
+  width: 100%;
+  border: 2px solid #777;
+  border-radius: 8px;
+  background: #000c20;
+  color: #f7f7f7;
+}
+
+article #form-comment .div-comentario
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  font-size: 0.8em;
+}
+
+
+article #form-comment .envia-comment
+{
+  position: relative;
+  color: #fff;
+  margin-bottom: 2rem;
+  padding: .2rem 1rem;
+  background: #777;
+  border: none;
+  border-radius: 20px;
+  transition: 0.5s;
+  cursor: pointer;
+
+  &:hover { background: #000c20; transition: 0.5s;}
+}
+
+// Botão Definir #form
+article #form .btn-progress
+{
+  position: relative;
+  bottom: 1rem;
+  padding: 5px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #2337a5;
+  background: transparent;
+  letter-spacing: .5px;
+  font-size: 1em;
+  cursor: pointer;
+  border: none;
+  font-weight: 700;
+  border-radius: 4px;
+  margin-top: 2rem;
+  transition: 0.5s;
+
+  span
+  {
+    display: flex;
+    position: absolute;
+    background: #619bff;
+    
+    
+    &:nth-child(1) {
+      left: 0;
+      bottom: 0;
+      width: 1px;
+      height: 100%;
+      transform: scaleY(0);
+      transform-origin: top;
+      transition: transform 0.5s;
+    }
+  }
+  &:hover{ color: rgba(255,255,255,1); 
+      
+    span:nth-child(1){
+      transform: scaleY(1);
+      transform-origin: bottom;
+      transition: transform 0.5s;
+    }
+  }
+  
+  span:nth-child(2) {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    transform: scalex(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+  }
+  &:hover{ color: rgba(255,255,255,1); 
+      
+    span:nth-child(2){
+      transform: scalex(1);
+      transform-origin: left;
+      transition: transform 0.5s;
+    }
+  }
+  
+  span:nth-child(3) {
+    right: 0;
+    bottom: 0;
+    width: 1px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+  }
+  &:hover{ color: rgba(255,255,255,1); 
+      
+    span:nth-child(3){
+      transform: scaleY(1);
+      transform-origin: bottom;
+      transition: transform 0.5s;
+      transition-delay: 0.5s;
+    }
+  }
+
+  span:nth-child(4) {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 1px;
+    transform: scalex(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+
+  }
+  &:hover{ 
+    color: #2894ff; 
+      
+    span:nth-child(4){
+      transform: scalex(1);
+      transform-origin: left;
+      transition: transform 0.5s;
+      transition-delay: 0.5s;
+    }
+  }
+}

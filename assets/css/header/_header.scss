@@ -1,0 +1,68 @@
+header
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2rem 0 3rem 0;
+}
+
+header .titulo-principal 
+{
+    background-color: rgba(255,255,255,0.2);
+    padding: 0 2rem;
+    border-radius: 8px;
+    backdrop-filter: blur(20px);
+}
+
+header .titulo-principal h1
+{
+    font-size: 3em;
+    color: #00ff95;
+    text-shadow: 0 2px 2px #777
+}
+
+// Botao ATUALIZAR
+
+header .btn-atualizar
+{
+    position: relative;
+    width: 200px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    color: #fff;
+    background: transparent;
+    text-decoration: none;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+header .btn-atualizar svg,
+header .btn-atualizar svg rect
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+}
+
+header .btn-atualizar svg rect 
+{
+    stroke: #ff4564;
+    stroke-width: 4;
+    transition: 0.5s;
+    stroke-dasharray: 60 200; /* width and height from 'a' */
+    stroke-dashoffset: 320;/* 60+60+200 */ 
+}
+
+header .btn-atualizar:hover svg rect
+{
+    stroke: #00ff95; 
+    stroke-dasharray: 200 60;
+    stroke-dashoffset: 0;
+}
